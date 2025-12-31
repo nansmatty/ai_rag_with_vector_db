@@ -26,3 +26,5 @@ export const kbSearchTool = tool(
 		}),
 	}
 );
+
+export const agentTools = [kbSearchTool];
