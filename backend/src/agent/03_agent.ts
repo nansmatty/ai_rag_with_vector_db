@@ -43,3 +43,29 @@ export async function runProductAgent(messages: { role: string; content: string 
 		citations: [],
 	};
 }
+
+// 2. Function to run without responseFormat using provideStrategy for langchain versions <1.0.4
+// export async function runProductAgent(messages: { role: string; content: string }[]): Promise<{ answer: string; citations: any[] }> {
+// 	const result: any = await ProductAgent.invoke({ messages });
+
+// 	try {
+// 		// Get only the final AI message
+// 		const lastMessage = result.messages[result.messages.length - 1];
+
+// 		if (typeof lastMessage?.content !== 'string') {
+// 			throw new Error('No final AI message');
+// 		}
+
+// 		const parsed = JSON.parse(lastMessage.content);
+
+// 		return {
+// 			answer: parsed.answer,
+// 			citations: parsed.citations ?? [],
+// 		};
+// 	} catch {
+// 		return {
+// 			answer: "I don't know based on the available documentation.",
+// 			citations: [],
+// 		};
+// 	}
+// }
