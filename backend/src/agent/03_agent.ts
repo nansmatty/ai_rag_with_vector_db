@@ -24,6 +24,8 @@ export const ProductAgent = createAgent({
 	responseFormat: providerStrategy(AgentResponseSchema),
 });
 
+// 1. Function to run with responseFormat using provideStrategy but required the langchain version ^1.0.4
+
 export async function runProductAgent(messages: { role: string; content: string }[]): Promise<{ answer: string; citations: any[] }> {
 	const result: any = await ProductAgent.invoke({ messages });
 
@@ -35,6 +37,7 @@ export async function runProductAgent(messages: { role: string; content: string 
 	}
 
 	// Fallback in case structuredResponse is not available
+
 	return {
 		answer: "I don't know based on the available documentation.",
 		citations: [],

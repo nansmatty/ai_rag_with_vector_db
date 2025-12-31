@@ -1,3 +1,4 @@
 node_modules
 .env
 uploads/
+discard_system_prompt.txt

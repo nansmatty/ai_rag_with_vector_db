@@ -28,7 +28,7 @@
 		"cors": "^2.8.5",
 		"dotenv": "^16.6.1",
 		"express": "^4.22.1",
-		"langchain": "^1.2.3",
+		"langchain": "^1.0.4",
 		"mongodb": "^7.0.0",
 		"multer": "^2.0.2",
 		"nanoid": "^5.1.6",
