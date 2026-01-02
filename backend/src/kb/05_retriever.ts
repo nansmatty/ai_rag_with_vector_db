@@ -15,7 +15,7 @@ export async function retrieveRelevantChunks(query: string, namespace: string = 
 	if (!results.length) return { docs: [], confidence: 0 };
 
 	const docs: Document[] = results.map(([doc]) => doc);
-	const scores = results.map(([, score]) => score);
+	const scores = results.map(([_, score]) => score);
 
 	// Simple confidence calculation based on scores ( Instructor version)
 	const bestScore = Math.max(...scores);
