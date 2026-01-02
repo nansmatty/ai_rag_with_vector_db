@@ -187,10 +187,10 @@ export default function Home() {
 								className='resize-none min-h-25 rounded-xl border-slate-400 bg-slate-50'
 							/>
 							<div className='flex items-center justify-between'>
-								<div className='text-xs text-slate-200'>
+								<div className='text-xs text-slate-800'>
 									{threadId && (
-										<span>
-											Thread ID: <code className='text-[10px]'>{threadId}</code>
+										<span className='font-bold'>
+											Thread ID: <code className='font-semibold'>{threadId}</code>
 										</span>
 									)}
 								</div>
