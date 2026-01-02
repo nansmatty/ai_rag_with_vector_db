@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid';
 export type ChatRole = 'user' | 'assistant';
 export interface ChatMessage {
 	role: ChatRole;
-	content: String;
+	content: string;
 	timestamp?: Date;
 }
 
